@@ -21,8 +21,7 @@ const ColorList = ({ colors, updateColors }) => {
      .then((res) => {
        console.log(res)
        setEditing(false)
-       // i just mapped through the colors list and updated the one with the same id as the edited one to the new color;
-       //and then set the colors list by calling the updateColors prop passed into ColorList from BubblePage
+       
        const newColorList = colors.map(color => {
          if(color.id === res.data.id){
            return res.data
@@ -30,7 +29,7 @@ const ColorList = ({ colors, updateColors }) => {
            return color
          }
        })
-       updateColors(newColorList)
+       updateColors(newColorList) 
        setColorToEdit(initialColor);
      })
      .catch(error => {
