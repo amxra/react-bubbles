@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import withAuth from "../axios/index";
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
+import Nav from "./Nav";
 const BubblePage = () => {
  const [colorList, setColorList] = useState([]);
  // fetch your colors data from the server when the component mounts
@@ -22,6 +24,7 @@ const BubblePage = () => {
    <>
      <ColorList colors={colorList} updateColors={setColorList} />
      <Bubbles colors={colorList} />
+     <Nav/>
    </>
  );
 };

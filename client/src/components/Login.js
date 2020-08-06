@@ -5,6 +5,13 @@ import styled from 'styled-components';
 const StyledDiv = styled.div `
 width: 70%;
 margin: 0 auto;
+display: flex;
+justify-content:center;
+align-items: center;
+
+span{
+  color: red;
+}
 
 .form{
   border: 1px solid blue;
@@ -62,6 +69,7 @@ const Login = (props) => {
      <div>
        <button onClick={submit}>Submit</button>
      </div>
+     <div><p>Username: <span>user</span>, Password: <span>password</span></p></div>
    </div>
    </div>
    </StyledDiv>
